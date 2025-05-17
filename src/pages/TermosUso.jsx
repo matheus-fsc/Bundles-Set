@@ -1,14 +1,16 @@
 import React from "react";
-import "../styles/termouso.css";
+import "../styles/style.css";
 import { useNavigate } from "react-router-dom";
-import BackButton from "../components/buttons/BackButton";
+import Header_ from "../components/Header_";
+import Footer from "../components/Footer";
 export default function TermosUso() {
 
     const navigate = useNavigate();
 
     return (
+        <>
+        <Header_ />
         <section className="termos">
-            <BackButton />
             <h1>Termos de Uso do Steam Bundle Set</h1>
             <p>
                 Bem-vindo ao Steam Bundle Set! Ao acessar e utilizar este site, você
@@ -122,20 +124,37 @@ export default function TermosUso() {
                 os Termos de Uso para se manter informado sobre eventuais mudanças.
             </p>
 
-            <h2>10. Lei Aplicável</h2>
+            <h2>10. Variações de Preços</h2>
+            <p>
+                Os preços exibidos nos cards dos bundles podem não refletir o valor exato no momento do acesso. Isso ocorre porque:
+            </p>
+                <ul>
+                    <li>Os valores podem variar conforme a conta do usuário Steam, especialmente se ele já possuir um ou mais jogos do pacote (o que pode reduzir o preço final).</li>
+                    <li>Nosso sistema não realiza atualização de preços em tempo real, devido a limitações de servidor e recursos. Os dados são coletados em intervalos e podem ficar desatualizados por algumas horas.</li>
+                </ul>
+            <p>
+                Recomendamos que o usuário sempre verifique o preço final diretamente na página do bundle na Steam antes de efetuar qualquer compra.
+            </p>
+
+            <h2>11. Lei Aplicável</h2>
             <p>
                 Estes Termos de Uso são regidos pelas leis do <strong>Brasil</strong> e
                 quaisquer disputas relacionadas ao uso do site serão resolvidas nos
                 tribunais competentes dessa localidade.
             </p>
 
-            <h2>11. Contato</h2>
+            <h2>12. Contato</h2>
             <p>
                 Se você tiver dúvidas ou preocupações sobre estes Termos de Uso, entre
                 em contato conosco através das nossas redes sociais no footer.
             </p>
 
             <p>Data de entrada em vigor: 13/03/2025</p>
+
         </section>
+        <Footer />
+        </>
     );
+
 }
+
